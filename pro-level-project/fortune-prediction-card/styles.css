@@ -1,17 +1,226 @@
 body{
-  background-color: 
-}
+    background: linear-gradient(135deg, #1A000D, #1A000D);
+    color: #f5f5fA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+     
+    }
+
 .page{
     text-align: center;
     padding: 50px;
     font-family: "Arial", sans-serif;
   
-}
+   }
+
 .hidden{
     display: none;
-}
+   }
+
 .crystal-ball{
 font-size: 90px;
 margin-bottom: 20px;
 
+   }
+
+#mind-bar{
+    height: 20px;
+    background-color: #0077b6; 
+    width: 0%;                
+    transition: width 1s ease-in-out; 
+    } 
+
+#happiness-bar{
+    height: 20px;
+    background-color: #ffb703;
+    width: 0%;
+    transition: width 1s ease-in-out;
+    }
+
+#success-bar{
+    height: 20px;
+    background-color: #2ec4b6 ;
+    width: 0%;
+    transition: width 1s ease-in-out;
+    }
+
+#money-bar{
+    height: 20px;
+    background-color: #2b9348;
+    width: 0%;
+    transition: width 1s ease-in-out;
+    }
+
+#love-bar{
+    height: 20px;
+    background-color: #ff4d6d;
+    width: 0%;
+    transition: width 1s ease-in-out;
+    }
+
+#sadness-bar{
+    height: 20px;
+    background-color: #8a8a8a;
+    width: 0%;
+    transition: width 1s ease-in-out;
+    } 
+
+#shocking-bar{
+    height: 20px;
+    background-color: #fb8500;
+    width: 0%;
+    transition: width 1s ease-in-out;
+    }
+
+
+
+h2{
+    margin-bottom: 20px;
+    color: #f1c40f
+    }
+
+input {
+    width: 80%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+
+    }
+
+
+button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+
+    }
+
+button:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+   }
+
+
+.container {
+    background-color: #1a0b2e; /* Deep Midnight Purple */
+    border: 2px solid #ffd700; /* Pure Gold Border */
+    border-radius: 16px; /* Smooth corners */
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4); /* Golden Glow */
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+   
+
+} 
+
+#meter-result {
+    background: linear-gradient(145deg, #1f0f3d, #140828);
+    border: 2px solid #ffd700;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: 15px;
+
 }
+        
+.meter-box h3{
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.label-box {
+    font-weight: bold;
+    color: #ff007f;
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.6);
+    margin-bottom: 15px;
+    font-family: "Arial Black", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+
+}
+
+.bar{
+    background-color: #0c0418;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    height: 14px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px
+  }
+
+.prediction-card-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-top: 10px;
+}
+
+#greet{
+    font-size: 13px;
+    color: #ff007f;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(255, 0, 127, 0.4);
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.prediction-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 5px 0 15px 0;
+    font-family: 'Geogia', serif;
+    letter-spacing: 1.5px;
+    background: linear-gradient(135deg, #ffe066 0%, #ffd700 50%, #b39700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8));
+}
+
+.card-divider {
+    height: 1px; width: 60%;
+    margin: 0 auto;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+    box-shadow: 0 0 8px #ffd700;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+.action-btn {
+    background-color: #ffd700;
+    color: #1a0b2e;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+.action-btn:hover {
+    background-color: #ffffff;
+    box-shadow: 0 0 15px #ffd700;
+}
+
