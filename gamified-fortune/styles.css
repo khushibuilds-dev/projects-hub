@@ -120,12 +120,14 @@ button:hover {
     color: #ffffff;
     padding: 30px;
     text-align: center;
+    border: 2px solid #ffd700;
+    box-shadow: 0 0 15px #ffd700; 
    
 
 } 
 
 #meter-result {
-    background: linear-gradient(145deg, #1f0f3d, #140828);
+    background-color: rgba(255, 255, 255, 0.05);
     border: 2px solid #ffd700;
     padding: 20px;
     text-align: center;
