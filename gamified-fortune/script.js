@@ -122,6 +122,7 @@ function fortuneMeter(){
 function goBack(){
     document.getElementById("meter-result").classList.add("hidden");
     document.getElementById("container-box").classList.remove("hidden");
+   
 }
 
 const quizData = [
@@ -231,6 +232,7 @@ nextBtn.addEventListener('click', () => {
 
 function checkQuizResult() {
     const resultMessageDiv = document.getElementById("quiz-result-message");
+    const containerBox = document.getElementById('container-box');
     
     resultMessageDiv.innerHTML = "";
 
@@ -255,4 +257,10 @@ function checkQuizResult() {
             resultMessageDiv.innerHTML = ""; 
         }, 3000);
     }
+
+     setTimeout(() => {
+            meterBox.style.display = 'none';
+            containerBox.style.display = 'block'
+            resultMessageDiv.innerHTML = ""; 
+        }, 8000);
 }
