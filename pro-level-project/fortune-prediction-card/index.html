@@ -13,13 +13,13 @@
     <!-- PAGE 1:  NAME INPUT-->
 
     <div id = "input-page" class = "page">
-      <h2>Fortune Teller</h2>
+      <h1></h>Fortune Teller</h1>
       <p>Bramhand (Universe) aapko ek ishara dena chahta hai. Buttons par click karein aur sandesh sunein.</p>
       <div class="crystal-ball">🔮</div>
       <p>Apna naam dalein aur jaanein ki aaj aapki life ka meter kya keh raha hai!</p>
       <input type = "text" id = "username" placeholder = "Enter your name here..." required> 
       
-      <span class = "click-here">👉</span> <button class="action-btn" onclick = "fortuneTeller()">Click Once</button>
+      <button class="action-btn" onclick = "fortuneTeller()">👉Click Once</button>
     </div>
     
     <!--PAGE 2: FORTUNE RESULT -->
@@ -27,28 +27,36 @@
     <div id = "fortune-result" class = "page hidden">
       <h2>Your Fortune Result</h2>
       <p>reading your satrs......🔎</p>
-      <p id = "fortune-message">Reading your stars...</p>
+      <p id="error-message" class="hidden">  Please enter your name first ⚠️</p>
+      <p id = "fortune-message"></p>
+      <p id="fortunes"></p>
+
+      
+     <button class="action-btn" onclick="again()">Once more🔂</button>
     </div>
     
     <!--PAGE 3: FORTUNE METER -->
 
     <div id = "meter-fortune" class = "page">
-    <h3>Kya aap aaaj ka apna fortune meter card dhekna chahate hai.....? </h3>
-    <input type = "text" id = "name" placeholder = "Enter your name for fortune-card" required>
-    <span class = "click-here"> 👉 </span> <button class="action-btn" onclick = "fortuneMeter()">Click Once</button>
-    <p>Genarating your card.......✍️</p>  
-  </div>
+      <h2>Kya aap aaaj ka apna fortune meter card dhekna chahate hai.....? </h2>
+      <input type = "text" id = "name" placeholder = "Enter your name...." required>
+      <button class="action-btn" onclick = "fortuneMeter()">👉Click Once</button>
+      <p>Genarating your card.......✍️</p>  
+      <p id="alert-msg" class="hidden">Please enter your name first ⚠️</p>
+    </div>
 
   </div>
 
 <!--PAGE 4: FORTUNE METERE -RESULT-->
   <div id = "meter-result" class = "page hidden">
-   <div class="prediction-card-header">
 
-    <h3 id="greet"></h3>
 
+    <div class="prediction-card-header">
+
+      <h3 id="greet"></h3>
     
-    <h2 class="prediction-title">Prediction Card</h2>
+    
+      <h2 class="prediction-title">Prediction Card</h2>
     
     <div class="card-divider"></div>
 </div>
@@ -60,6 +68,7 @@
     </div>
 
     <!--Money Box-->
+    
     <div class = "meter-box">
       <div class = label-box><span>Money</span> <span id = "money-value">0%</span></div>
       <div class = "bar"><div class = "fill-money" id = "money-bar"></div></div>
@@ -92,24 +101,32 @@
       <div class="bar"><div class="fill-sadness" id="sadness-bar"></div></div>
     </div>
 
-    <!--Pyar-->
+    <!--love-->
 
     <div class="meter-box">
-      <div class="meter-label"><span>Love</span><span id="love-value">0%</span></div>
+      <div class="label-box"><span>Love</span><span id="love-value">0%</span></div>
       <div class="bar"><div class="fill-love" id="love-bar"></div></div>
     </div>
 
     <!--Go Back Btn and Rule Btn-->
-    <footer>
-    <p> Agar aap apna fortune_Card ko Dubara banana (Regenerate) karna chahate ho to kuch rule hai rule btn per click kare rule janane ke liye</p>
-     <button class="action-btn" onclick="rulePage()">Rule⚠️</button> <span><button class="action-btn" onclick="goBack()">Go back🔄</button></span>
+    
+   
+     <button class="action-btn" onclick="goBack()">Go back🔄</button>
 
-     </footer>
+     <button id="regen-btn"">🔄 Card Regenerate करें (खेलें क्विज़)</button>
+
   </div>
 
-  
+    <div id="quiz-box">
+      <h3 id="progress">सवाल 1 / 5</h3>
+      <div class="question" id="question-text">सवाल लोड हो रहा है...</div>
+      <div class="options-container" id="options-container"></div>
+      <button id="next-btn" class="hidden">अगला सवाल ➡️</button>
 
-  <!--Rule Page-->
+      <div id="quiz-result-message"></div>
+    </div>
+
+  
   
 
   <script src="script.js"></script>
