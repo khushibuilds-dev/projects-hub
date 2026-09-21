@@ -10,7 +10,6 @@ body{
     }
 
 .page{
-    text-align: center;
     padding: 50px;
     font-family: "Arial", sans-serif;
   
@@ -30,60 +29,61 @@ margin-bottom: 20px;
     height: 20px;
     background-color: #0077b6; 
     width: 0%;                
-    transition: width 1s ease-in-out; 
+    transition: width 0.5s ease-in-out; 
     } 
 
 #happiness-bar{
     height: 20px;
     background-color: #ffb703;
     width: 0%;
-    transition: width 1s ease-in-out;
+    transition: width 0.5s ease-in-out;
     }
 
 #success-bar{
     height: 20px;
     background-color: #2ec4b6 ;
     width: 0%;
-    transition: width 1s ease-in-out;
+    transition: width 0.5s ease-in-out;
     }
 
 #money-bar{
     height: 20px;
     background-color: #2b9348;
     width: 0%;
-    transition: width 1s ease-in-out;
+    transition: width 0.5s ease-in-out;
     }
 
 #love-bar{
     height: 20px;
     background-color: #ff4d6d;
     width: 0%;
-    transition: width 1s ease-in-out;
+    transition: width 0.5s ease-in-out;
     }
 
 #sadness-bar{
     height: 20px;
     background-color: #8a8a8a;
     width: 0%;
-    transition: width 1s ease-in-out;
+    transition: width 0.5s ease-in-out;
     } 
 
 #shocking-bar{
     height: 20px;
     background-color: #fb8500;
     width: 0%;
-    transition: width 1s ease-in-out;
+    transition: width 0.5s ease-in-out;
     }
 
 
 
 h2{
+    font-size: 30px;
     margin-bottom: 20px;
-    color: #f1c40f
+    color:  pink;
     }
 
 input {
-    width: 80%;
+    width: 40%;
     padding: 12px;
     border: none;
     border-radius: 25px;
@@ -115,10 +115,8 @@ button:hover {
 
 
 .container {
-    background-color: #1a0b2e; /* Deep Midnight Purple */
-    border: 2px solid #ffd700; /* Pure Gold Border */
-    border-radius: 16px; /* Smooth corners */
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4); /* Golden Glow */
+    background-color: #1a0b2e; 
+    border-radius: 16px; 
     color: #ffffff;
     padding: 30px;
     text-align: center;
@@ -174,8 +172,8 @@ button:hover {
 }
 
 #greet{
-    font-size: 13px;
-    color: #ff007f;
+    font-size: 16px;
+    color: #fff;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -185,15 +183,11 @@ button:hover {
 }
 
 .prediction-title {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 700;
     margin: 5px 0 15px 0;
     font-family: 'Geogia', serif;
     letter-spacing: 1.5px;
-    background: linear-gradient(135deg, #ffe066 0%, #ffd700 50%, #b39700 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8));
 }
 
@@ -204,10 +198,6 @@ button:hover {
     box-shadow: 0 0 8px #ffd700;
 }
 
-footer {
-    text-align: center;
-    margin-top: 30px;
-}
 .action-btn {
     background-color: #ffd700;
     color: #1a0b2e;
@@ -224,3 +214,161 @@ footer {
     box-shadow: 0 0 15px #ffd700;
 }
 
+
+
+#error-message, #alert-msg {
+    background: rgba(255, 77, 77, 0.1);
+    border: 1px solid #ff4d4d;
+    color: #ffb3b3;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+#fortune-result {
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px solid #FFD700;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 550px;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    text-align: center;
+    color: #ffffff;
+}
+
+#fortunes {
+    background: rgba(255, 215, 0, 0.08);
+    border-left: 4px solid #FFD700;
+    padding: 15px;
+    font-style: italic;
+    color: #ffe680;
+    margin-top: 15px;
+}
+
+h1 {
+   font-family: 'Poppins', sans-serif;
+   font-size: 36px;
+   font-weight: 800;
+   color: #FFD700;
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.5);
+   margin-bottom: 20px;
+   margin-top: 10px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;  
+    font-size: 20px;                   
+    color: #E0E0E0;                     
+    text-align: center;                
+    line-height: 1.6;                 
+    max-width: 600px;                   
+    margin: 0 auto 30px auto;
+    font-weight: bold;           
+}
+
+/* 🔮 Crystal Ball Main Styling */
+.crystal-ball {
+    font-size: 8rem; 
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    z-index: 2;
+    
+    /* Glow jo ball ke 'bahar aane aur andar jaane' ka effect banayega */
+    animation: magicPulseGlow 4s ease-in-out infinite alternate;
+}
+
+/*  Ball ke andar ghoomta hua energy effect (Bina text ko hilaye) */
+.crystal-ball::before {
+    content: '🔮';
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    mix-blend-mode: color-dodge;
+    filter: hue-rotate(0deg) blur(1px);
+    /* Sirf ye layer gol-gol ghoomengi jisse andar energy ghoomti hui lagegi */
+    animation: internalSpin 6s linear infinite;
+    z-index: -1;
+}
+
+
+@keyframes magicPulseGlow {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(162, 0, 255, 0.5)) 
+                drop-shadow(0 0 20px rgba(0, 242, 254, 0.3));
+        transform: scale(1); /* Normal Size */
+    }
+    100% {
+        /* Jab glow bahar aayega (Maximum neon explosion) */
+        filter: drop-shadow(0 0 35px rgba(235, 94, 255, 0.9)) 
+                drop-shadow(0 0 70px rgba(0, 242, 254, 0.8))
+                drop-shadow(0 0 100px rgba(162, 0, 255, 0.4));
+        transform: scale(1.05); /* Halka sa bada hoga jaise ki bahar aa rha ho */
+    }
+}
+
+/* 2. Internal Spin: Sirf magical aura ghoomega, aapka page ya main element bilkul sthir (stable) rahega */
+@keyframes internalSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+   #quiz-box { 
+        display: none; 
+        background: white;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+        margin-top: 20px;
+    }
+    .question { 
+        font-size: 18px;
+        font-weight: 600;
+        margin: 20px 0; 
+        text-align: left; 
+        color: blue;
+        }
+
+    .options-container { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .option-btn { 
+        background: #fff; 
+        border: 2px solid #e0e0e0; 
+        color: #333; 
+        text-align: left; 
+        margin: 0; 
+    }
+    
+    .option-btn:hover:not([disabled]) 
+        { background: #f5f5f5; }
+
+
+    .correct { 
+        background-color: 
+        #d4edda !important; 
+        border-color: #28a745 !important; 
+        color: #155724; 
+    }
+    .incorrect {
+        background-color: #f8d7da !important; 
+        border-color: #dc3545 !important; 
+        color: #721c24; }
+
+        #progress{
+        color: green
+        }
